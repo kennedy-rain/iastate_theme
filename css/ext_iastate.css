@@ -176,6 +176,10 @@ a.isu-dropdown-submenu {
 	margin: auto;
 }
 
+.isu-region_content .isu-block {
+	padding-left: 20px;
+}
+
 /* Breadcrumb Styling
 .isu-breadcrumb {
 	margin-left: 11px;
