@@ -1241,17 +1241,27 @@ div.fontawesome-icon i {
 		text-align: -webkit-match-parent;
 	}
 
-
+	.isu-region_content .isu-block:not(.isu-block-front) {
+		padding-left: 0%;
+		padding-right: 0%;
+		margin: auto;
+		max-width: 1200px;
+	}
 
 }
 
 
 @media screen and (max-width : 1199px) {
-
+	.isu-region_content .isu-block:not(.isu-block-front) {
+		padding-left: 0%;
+		padding-right: 0%;
+		margin: auto;
+		max-width: 1000px;
+	}
 	.isu-social-menu-footer{
 		margin-left: 10px;
 	}
-
+	
 	/* Layout Builder Responsive*/
 	div#block-iastate-theme-local-tasks {
 		padding-left: 0%;
@@ -1283,7 +1293,14 @@ div.fontawesome-icon i {
 
 
 @media screen and (max-width : 991px) {
- 	.isu-wordmark-logo {
+ 	.isu-region_content .isu-block:not(.isu-block-front) {
+		padding-left: 2.5%;
+		padding-right: 0%;
+		margin: auto;
+		max-width: 955px;
+	}
+	
+	.isu-wordmark-logo {
  		max-width: 360px;
 		margin-top: 0.5rem;
  	}
