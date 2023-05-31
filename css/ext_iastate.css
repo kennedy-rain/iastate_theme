@@ -1251,7 +1251,10 @@ div.fontawesome-icon i {
 	.isu-col-header-first {
 		text-align: -webkit-match-parent;
 	}
-
+	
+	.isu-menu-navbar {
+		padding-left: 0.45%;
+	}
 
 
 }
@@ -1261,6 +1264,10 @@ div.fontawesome-icon i {
 
 	.isu-social-menu-footer{
 		margin-left: 10px;
+	}
+	
+	.isu-menu-navbar {
+		padding-left: 1%;
 	}
 
 	/* Layout Builder Responsive*/
