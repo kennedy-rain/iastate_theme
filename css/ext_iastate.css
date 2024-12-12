@@ -485,6 +485,17 @@ div.upcoming-events-white h2.isu-block-title.h4 {
 }
 
 /* --------------------------------------  */
+/* ## Dashboard
+/* --------------------------------------  */
+.isueo-dashboard {
+	max-height: 400px;
+	overflow: auto;
+}
+.isueo-dashboard.layout-block--background--gray .isu-fieldset {
+	background-color: #fff;
+}
+
+/* --------------------------------------  */
 /* ## Dashed Yellow Border
 /* --------------------------------------  */
 .isueo-gold-dash {
@@ -493,58 +504,6 @@ div.upcoming-events-white h2.isu-block-title.h4 {
 	margin-bottom: 20px;
 	border: 2px dashed var(--gold);
 }
-
-/* --------------------------------------  */
-/* ## Horizontal Events
-/* --------------------------------------  */
-/* Remove after Events have been updated
-#isu-horiz-events .program_offering_blocks ul{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    column-gap: 1em;
-}
-#isu-horiz-events li.event {
-    box-shadow: 0.5625rem 0.5625rem 1.25rem rgb(0 0 0 / 20%);
-    padding: .5em;
-}
-#isu-horiz-events div.event_date {
-    border-right: none;
-    height: 100%;
-    text-align: center;
-    padding-right: 5%;
-    margin: 0;
-    min-width: auto;
-    color: var(--midnight);
-    line-height: 1.2;
-}
-#isu-horiz-events span.event_day {
-    color:var(--midnight);
-    font-weight: 700;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-#isu-horiz-events span.event_month {
-    margin-bottom: -7px;
-    color: var(--midnight);
-}
-#isu-horiz-events div.event_title a {
-    display: block;
-    line-height: 1.2;
-    padding-bottom: .2rem;
-    margin-top: .3em;
-    font-size: clamp(.9rem, 1.1vw, .8rem);
-}
-#isu-horiz-events div.event_series {
-    font-size:clamp(.6rem, 1.1vw, .8rem);
-    color: #666;
-}
-#isu-horiz-events div.event_venue {
-    font-size: clamp(.6rem, 1.1vw, .8rem);
-}
-a#isu-horiz-events {
-    text-decoration: underline;
-    float: right;
-}*/
 
 /* --------------------------------------  */
 /* ## MEDIA LIBRARY
@@ -888,3 +847,181 @@ div.fontawesome-icon i {
 /* --------------------------------------  */
 /* ## SLICK SLIDER
 /* --------------------------------------  */
+
+/** staff profile **/
+.personal-profile-info-card_wrap {
+	margin-bottom: 50px;
+	margin-top: 50px;
+  }
+
+  @media (min-width: 1200px) {
+	.personal-profile-info-card_wrap {
+	  margin-left: -158px;
+	  margin-right: -268px;
+	}
+  }
+
+  @media (min-width: 1400px) {
+	.personal-profile-info-card_wrap {
+	  margin-left: -108px;
+	  margin-right: -215px;
+	}
+  }
+
+  .personal-profile-info-card {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+  }
+
+  .personal-profile-info-card__media {
+	margin: 0 auto;
+	max-width: 100%;
+
+	@media (min-width: 576px) {
+	  max-width: 304px;
+	}
+
+	@media (min-width: 768px) {
+	  flex: 0 0 auto;
+	  width: 304px;
+	  margin-bottom: 34px;
+	}
+
+	@media (min-width: 1200px) {
+	  margin-bottom: 0;
+	}
+
+	position: relative;
+  }
+
+  .personal-profile-info-card__media::before {
+	content: "";
+	display: block;
+	padding-top: 100%;
+  }
+
+  .personal-profile-info-card__content {
+	padding: 38px 0;
+
+	@media (min-width: 768px) {
+	  flex: 1 1 auto;
+	  padding: 0 38px 38px 38px;
+	}
+  }
+
+  .personal-profile-info-card--no-image .personal-profile-info-card__content {
+	padding-left: 0;
+  }
+
+  .personal-profile-info-card__name {
+	position: relative;
+	font-size: 30px;
+	font-weight: 700;
+	padding-bottom: 20px;
+	margin-top: 48px;
+	margin-bottom: 22px;
+	border-bottom: 4px solid var(--gold);
+  }
+
+  .personal-profile-info-card__titles {
+	margin-bottom: 30px;
+  }
+
+  .personal-profile-info-card__titles li {
+	margin-bottom: 12px;
+  }
+
+  .personal-profile-info-card__contact-box {
+	background-color: #f8f8f8;
+	margin: 20px 0 0;
+	padding: 38px;
+	position: relative;
+
+	@media (min-width: 768px) {
+	  flex: 0 1 auto;
+	  width: 100%;
+	  margin: 0;
+	}
+
+	@media (min-width: 1200px) {
+	  padding: 50px 60px;
+	  flex: 0 0 auto;
+	  width: 412px;
+	}
+  }
+
+  .personal-profile-info-card__contact-box::before {
+	content: "";
+	border-bottom: 8px solid var(--gold);
+	top: -4px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 56px;
+	height: 8px;
+	position: absolute;
+  }
+
+  .personal-profile-info-card__contact-box h2 {
+	font-size: 1.25rem;
+	padding-bottom: 0;
+  }
+
+  .personal-profile-info-card__contact-box p {
+	font-weight: 700;
+  }
+
+  .personal-profile-info-card__contact-box p a {
+	color: #808080;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+	transition: color 0.2s ease-in-out;
+  }
+
+  .personal-profile-info-card__contact-box p a:hover {
+	color: var(--cardinal);
+  }
+
+  .personal-profile-info-card__contact-box-columns-wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	max-width: 625px;
+
+	@media (min-width: 1200px) {
+	  display: block;
+	  max-width: none;
+	}
+  }
+
+  .personal-profile-info-card__contact-box-column {
+	padding-bottom: 14px;
+  }
+
+  .personal-profile-info-card__contact-box-social {
+	display: flex;
+	flex-wrap: wrap;
+  }
+
+  .personal-profile-info-card__contact-box-social li {
+	margin-right: 10px;
+  }
+
+  .personal-profile-info-card__contact-box-social li a {
+	border-radius: 50%;
+	border: 2px solid var(--cardinal);
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--cardinal);
+	font-size: 13px;
+	transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+
+  .personal-profile-info-card__contact-box-social li a:hover {
+	border-color: var(--burgundy);
+	color: var(--burgundy);
+  }
