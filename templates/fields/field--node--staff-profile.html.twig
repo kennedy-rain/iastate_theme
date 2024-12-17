@@ -1,0 +1,16 @@
+<div class="staff-contact">
+  <h2>{{ data.working_title ? data.working_title : data.first_name ~ ' ' ~ data.last_name }}</h2>
+  <p><strong>Job Title:</strong> {{ data.job_title }}</p>
+  <p><strong>Email:</strong> <a href="mailto:{{ data.email }}">{{ data.email }}</a></p>
+  <p><strong>Phone:</strong> {{ phone }}</p>
+  <p><strong>Fax:</strong> {{ fax }}</p>
+  <p><strong>Address:</strong> {{ address }}</p>
+    <p><strong>Address:</strong> {{ field.address }}</p>
+      <p><strong>Address:</strong> {{ content.address }}</p>
+        <p><strong>Address:</strong> {{ entity.address }}</p>
+  <p><strong>Base County:</strong> {{ data.base_county }}</p>
+  <p><strong>Counties Served:</strong> {{ data.counties_served|join(', ') }}</p>
+  <p><strong>Program Areas:</strong> {{ data.program_areas|join(', ') }}</p>
+  <p><strong>Biography:</strong> {{ data.biography|raw }}</p>
+  <p><strong>Canonical URL:</strong> <a href="{{ data.canonical_url }}">{{ data.canonical_url }}</a></p>
+</div>
