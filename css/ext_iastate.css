@@ -326,19 +326,11 @@ img.staff_profile_smugmug {
 	border: none;
 }
 
-
- #contact-box::after {
-	content: "";
-    border-bottom: .5rem solid #f1be48;
-    left: 50%;
-    margin-left: -1.75rem;
-    width: 3.5rem;
-    height: .5rem;
-    position: absolute;
-	margin-top: -20px;
+#contact-box .address {
+	margin: 0;
 }
 
-.staff-profile-link a {
+.staff-profile-lik a {
 	color: var(--burgundy);
     font-family: Arial,Helvetica Neue,sans-serif;
     font-weight: 700;
