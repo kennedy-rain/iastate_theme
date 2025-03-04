@@ -16,7 +16,7 @@
  * - css/print.css - Used for print output
  */
 
-:root {
+ :root {
 	--cardinal: #c8102e;
 	--gold: #f1be48;
 	--burgundy: #7c2529;
@@ -287,6 +287,99 @@ img.staff_profile_smugmug {
 .staff-profile-reed-add-cty-editor input.form-autocomplete {
     border: 2px solid #868686 !important;
 }
+
+
+.personal-profile-info-card__contact-box {
+	background-color: var(--lt-gray);
+	/* min-width: 100%; */
+}
+
+#contact-box {
+	background-color: var(--lt-gray);
+		display: grid;
+
+}
+
+.isu-fieldset.personal-profile-info-card__contact-box {
+	background-color: var(--lt-gray);
+	border: none;
+
+}
+
+.personal-profile-info-card__contact-box .isu-legend {
+	color: var(--cardinal);
+	font-size: 1.5em;
+	margin: 0;
+	padding: 0;
+	background-color: var(--lt-gray);
+	float: left;
+	display: block;
+}
+
+
+.personal-profile-info-card__email, .personal-profile-info-card__address, .personal-profile-info-card__phone {
+	color: var(--dk-gray);
+	font-weight: 600;
+}
+
+#sp-location {
+	border: none;
+}
+
+
+ #contact-box::after {
+	content: "";
+    border-bottom: .5rem solid #f1be48;
+    left: 50%;
+    margin-left: -1.75rem;
+    width: 3.5rem;
+    height: .5rem;
+    position: absolute;
+	margin-top: -20px;
+}
+
+.staff-profile-link a {
+	color: var(--burgundy);
+    font-family: Arial,Helvetica Neue,sans-serif;
+    font-weight: 700;
+	text-decoration: none;
+	margin-left: 20px;
+}
+
+.staff-profile-link a:hover {
+	color: var(--cardinal);
+	transition: ease-in 200ms;
+}
+
+
+.staff-profile-link a:after {
+	content: "\f061";
+	width: 1.5rem;
+	margin-left: 0.25em;
+	font-family: FontAwesome;
+	font-size: 1em;
+	font-weight: normal;
+	text-align: center;
+	color: #7c2529;
+    font-weight: 700;
+}
+
+.staff-profile-link a:hover:after {
+	content: "\f061";
+	width: 1.5rem;
+	margin-left: 0.50em;
+	font-family: FontAwesome;
+	font-size: 1em;
+	font-weight: normal;
+	text-align: center;
+	color: var(--cardinal);
+    font-weight: 700;
+	text-decoration: none;
+	transition: ease-in 200ms;
+}
+
+
+
 /* Custodian of Public Record/About page */
 .isu-custodian-records-about {
 	max-width: 1140px;
