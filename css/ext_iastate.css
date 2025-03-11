@@ -296,14 +296,13 @@ img.staff_profile_smugmug {
 
 #contact-box {
 	background-color: var(--lt-gray);
-		display: grid;
-
+	display: grid;
+	min-width: 80vw;
 }
 
 .isu-fieldset.personal-profile-info-card__contact-box {
 	background-color: var(--lt-gray);
 	border: none;
-
 }
 
 .personal-profile-info-card__contact-box .isu-legend {
@@ -330,7 +329,7 @@ img.staff_profile_smugmug {
 	margin: 0;
 }
 
-.staff-profile-lik a {
+.staff-profile-link a {
 	color: var(--burgundy);
     font-family: Arial,Helvetica Neue,sans-serif;
     font-weight: 700;
