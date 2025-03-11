@@ -329,6 +329,11 @@ img.staff_profile_smugmug {
 	margin: 0;
 }
 
+.personal-profile-info-card__titles {
+	color: var(--cardinal);
+	font-weight: bold;
+}
+
 .staff-profile-link a {
 	color: var(--burgundy);
     font-family: Arial,Helvetica Neue,sans-serif;
