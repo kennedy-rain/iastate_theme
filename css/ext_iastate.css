@@ -1028,18 +1028,6 @@ div.fontawesome-icon i {
 	margin: 20px 0 0;
 	padding: 38px;
 	position: relative;
-
-	@media (min-width: 768px) {
-	  flex: 0 1 auto;
-	  width: 100%;
-	  margin: 0;
-	}
-
-	@media (min-width: 1200px) {
-	  padding: 50px 60px;
-	  flex: 0 0 auto;
-	  width: 412px;
-	}
   }
 
   .personal-profile-info-card__contact-box::before {
@@ -1078,11 +1066,6 @@ div.fontawesome-icon i {
 	justify-content: space-between;
 	align-items: flex-start;
 	max-width: 625px;
-
-	@media (min-width: 1200px) {
-	  display: block;
-	  max-width: none;
-	}
   }
 
   .personal-profile-info-card__contact-box-column {
@@ -1116,3 +1099,19 @@ div.fontawesome-icon i {
 	border-color: var(--burgundy);
 	color: var(--burgundy);
   }
+
+  /**Staff Responsive **/
+  @media (min-width: 1200px) {
+	.personal-profile-info-card_wrap {
+	  margin-left: -158px;
+	  margin-right: -268px;
+	}
+  }
+
+  @media (min-width: 1400px) {
+	.personal-profile-info-card_wrap {
+	  margin-left: -108px;
+	  margin-right: -215px;
+	}
+  }
+
