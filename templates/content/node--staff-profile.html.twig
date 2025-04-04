@@ -12,6 +12,16 @@
     <ul class="personal-profile-info-card__titles">
       <li>
         {{ node.field_staff_profile_job_title.0.value }}
+        <div class="personal-profile-info-card__address">
+              {% set address = node.field_staff_profile_addr.0 %}
+                {{ address.address_line1 }}
+                {{ address.address_line2 }}
+                {{ address.locality }}
+                {{ address.administrative_area }}
+                {{ address.postal_code }}
+                {{ address.country_code }}
+          </div>
+
       </li>
     </ul>
     {% if link_set %}
@@ -84,11 +94,20 @@
     </ul>
     {% endif %}
   </div>
-<ul>
-  {% for field, group in content['#group_children'] %}
-    <li>Field: {{ field }} - Group: {{ group }}</li>
-  {% endfor %}
-</ul>
+{% if node.field_staff_profile_base_county is not empty %}
+  {% set county_ref = node.field_staff_profile_base_county.0 %}
+
+  {% if county_ref.entity is not null %}
+    <p>County ID: {{ county_ref.entity.id }}</p>
+    <p>County Title: {{ county_ref.entity.label }}</p> <!-- Use label to get the title -->
+  {% else %}
+    <p>No valid county reference found.</p>
+  {% endif %}
+{% else %}
+  <p>No county data available.</p>
+{% endif %}
+
+
 
 </div>
 
