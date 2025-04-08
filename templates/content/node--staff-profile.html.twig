@@ -2,9 +2,12 @@
 
 <div class="personal-profile-info-card{% if not image %} personal-profile-info-card--no-image{% endif %}">
   {% if image %}
+{% if smugmug_image %}
   <div class="personal-profile-info-card__media">
-    <img src="{{ image }}" alt="" loading="lazy" width="450" height="450">
+				<div class="program-hero-image"><img src="https://photos.smugmug.com/photos/{{ node.field_plp_program_smugmug.value }}/10000/XL/{{ node.field_plp_program_smugmug.value }}-XL.jpg" alt="{{ node.label }}"></div>
   </div>
+{% endif %}
+
   {% endif %}
 
   <div class="personal-profile-info-card__content">
@@ -106,6 +109,15 @@
 {% else %}
   <p>No county data available.</p>
 {% endif %}
+
+<p>SmugMug ID image: {{ content.field_smugmug_id }}
+</p>
+<img src="{{ field_image }}">
+ <img
+  class="staff_profile_smugmug {{ is_blank ? 'staff_profile_blank_image' : '' }}"
+  src="{{ image_url }}"
+  alt="{{ is_blank ? '' : 'Staff photo' }}"
+/>
 
 
 

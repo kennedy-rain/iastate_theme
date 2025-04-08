@@ -294,6 +294,46 @@ img.staff_profile_smugmug {
 	/* min-width: 100%; */
 }
 
+.personal-profile-info-card_wrap {
+  margin-bottom: rem(50);
+  margin-top: rem(50);
+
+}
+
+.personal-profile-info-card__contact-box {
+  background-color: var(--lt-gray);
+  margin: 0 0;
+  position: relative;
+  }
+
+.personal-profile-info-card__contact-box::before {
+    content: "";
+    border-bottom: solid var(--gold);
+    left: 50%;
+    position: absolute;
+  }
+
+
+.personal-profile-info-card__contact-box-social {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.personal-profile-info-card__contact-box-social >* li >* a {
+      border-radius: 50%;
+      border: 2rem solid var(--cardinal);
+      display: inline-block;
+      width: 30rem;
+      height: 30rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cardinal);
+      font-size: 13rem;
+      transition: 0.2s border-color ease-in-out, 0.2s color ease-in-out;
+  }
+
+
 #contact-box {
 	background-color: var(--lt-gray);
 	display: grid;
@@ -945,20 +985,6 @@ div.fontawesome-icon i {
 	margin-top: 50px;
   }
 
-  @media (min-width: 1200px) {
-	.personal-profile-info-card_wrap {
-	  margin-left: -158px;
-	  margin-right: -268px;
-	}
-  }
-
-  @media (min-width: 1400px) {
-	.personal-profile-info-card_wrap {
-	  margin-left: -108px;
-	  margin-right: -215px;
-	}
-  }
-
   .personal-profile-info-card {
 	display: flex;
 	flex-wrap: wrap;
@@ -969,21 +995,6 @@ div.fontawesome-icon i {
 	margin: 0 auto;
 	max-width: 100%;
 
-	@media (min-width: 576px) {
-	  max-width: 304px;
-	}
-
-	@media (min-width: 768px) {
-	  flex: 0 0 auto;
-	  width: 304px;
-	  margin-bottom: 34px;
-	}
-
-	@media (min-width: 1200px) {
-	  margin-bottom: 0;
-	}
-
-	position: relative;
   }
 
   .personal-profile-info-card__media::before {
@@ -994,11 +1005,6 @@ div.fontawesome-icon i {
 
   .personal-profile-info-card__content {
 	padding: 38px 0;
-
-	@media (min-width: 768px) {
-	  flex: 1 1 auto;
-	  padding: 0 38px 38px 38px;
-	}
   }
 
   .personal-profile-info-card--no-image .personal-profile-info-card__content {
@@ -1051,7 +1057,7 @@ div.fontawesome-icon i {
   }
 
   .personal-profile-info-card__contact-box p a {
-	color: #808080;
+	color: var(--burgundy);
 	text-decoration: underline;
 	text-underline-offset: 2px;
 	transition: color 0.2s ease-in-out;
