@@ -4,7 +4,8 @@
   {% if image %}
 {% if smugmug_image %}
   <div class="personal-profile-info-card__media">
-				<div class="program-hero-image"><img src="https://photos.smugmug.com/photos/{{ node.field_plp_program_smugmug.value }}/10000/XL/{{ node.field_plp_program_smugmug.value }}-XL.jpg" alt="{{ node.label }}"></div>
+  <div> {{ node.field_staff_profile_smugmug.0.value }} </div>
+  <img src="https://photos.smugmug.com/photos/{{ field_staff_profile_smugmug }}/10000/XL/{{ field_staff_profile_smugmug }}-XL.jpg" alt="{{ node.label }}"></div>
   </div>
 {% endif %}
 
@@ -15,7 +16,22 @@
     <ul class="personal-profile-info-card__titles">
       <li>
         {{ node.field_staff_profile_job_title.0.value }}
-        <div class="personal-profile-info-card__address">
+      </li>
+    </ul>
+    {% if link_set %}
+    {% include "@link-set" with link_set %}
+    {% endif %}
+  </div>
+  <div class="personal-profile-info-card__contact-box">
+  <h2>Contact</h2>
+    <h2>{{ field.field.node.staff_profile.label }}</h2>
+    <div class="personal-profile-info-card__contact-box-columns-wrap">
+      <div class="personal-profile-info-card__contact-box-column">
+        {% if node.field_staff_profile_email.0.value  %}<p><a href="mailto:{{ node.field_staff_profile_email.0.value }}">{{ node.field_staff_profile_email.0.value }}</a></p>{% endif %}
+        {% if node.field_staff_profile_phone.0.value %}<p>{{ node.field_staff_profile_phone.0.value  }}</p>{% endif %}
+      </div>
+      <div class="personal-profile-info-card__contact-box-column">
+            <div class="personal-profile-info-card__address">
               {% set address = node.field_staff_profile_addr.0 %}
                 {{ address.address_line1 }}
                 {{ address.address_line2 }}
@@ -24,24 +40,6 @@
                 {{ address.postal_code }}
                 {{ address.country_code }}
           </div>
-
-      </li>
-    </ul>
-    {% if link_set %}
-    {% include "@link-set" with link_set %}
-    {% endif %}
-  </div>
-  <div class="personal-profile-info-card__contact-box">
-    <h2>{{ field.field.node.staff_profile.label }}</h2>
-    <div class="personal-profile-info-card__contact-box-columns-wrap">
-      <div class="personal-profile-info-card__contact-box-column">
-        {% if node.field_staff_profile_email.0.value  %}<p><a href="mailto:{{ node.field_staff_profile_email.0.value }}">{{ node.field_staff_profile_email.0.value }}</a></p>{% endif %}
-        {% if node.field_staff_profile_phone.0.value %}<p>{{ node.field_staff_profile_phone.0.value  }}</p>{% endif %}
-      </div>
-      <div class="personal-profile-info-card__contact-box-column">
-        <p>{{ field.field_staff_profile_addr.0.value }}<br>
-        {{ field.field.node.staff_profile.address.street }}<br>
-        {{ field.field.node.staff_profile.address.city_state_zip }}</p>
       </div>
     </div>
     {% if field.field.node.staff_profile.social_links %}
@@ -97,28 +95,6 @@
     </ul>
     {% endif %}
   </div>
-{% if node.field_staff_profile_base_county is not empty %}
-  {% set county_ref = node.field_staff_profile_base_county.0 %}
-
-  {% if county_ref.entity is not null %}
-    <p>County ID: {{ county_ref.entity.id }}</p>
-    <p>County Title: {{ county_ref.entity.label }}</p> <!-- Use label to get the title -->
-  {% else %}
-    <p>No valid county reference found.</p>
-  {% endif %}
-{% else %}
-  <p>No county data available.</p>
-{% endif %}
-
-<p>SmugMug ID image: {{ content.field_smugmug_id }}
-</p>
-<img src="{{ field_image }}">
- <img
-  class="staff_profile_smugmug {{ is_blank ? 'staff_profile_blank_image' : '' }}"
-  src="{{ image_url }}"
-  alt="{{ is_blank ? '' : 'Staff photo' }}"
-/>
-
 
 
 </div>

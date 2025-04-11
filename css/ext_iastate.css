@@ -370,8 +370,8 @@ img.staff_profile_smugmug {
 }
 
 .personal-profile-info-card__titles {
-	color: var(--cardinal);
-	font-weight: bold;
+  list-style-type: none;
+	padding: 0;
 }
 
 .staff-profile-link a {
@@ -1018,8 +1018,19 @@ div.fontawesome-icon i {
 	padding-bottom: 20px;
 	margin-top: 48px;
 	margin-bottom: 22px;
-	border-bottom: 4px solid var(--gold);
+	font-family: var(--serif-font);
+	color: var(--cardinal);
+	font-weight: 800;
   }
+
+.personal-profile-info-card__name::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 3.125rem;
+	border-bottom: 0.125rem solid var(--gold);
+}
 
   .personal-profile-info-card__titles {
 	margin-bottom: 30px;
@@ -1030,10 +1041,11 @@ div.fontawesome-icon i {
   }
 
   .personal-profile-info-card__contact-box {
-	background-color: #f8f8f8;
-	margin: 20px 0 0;
-	padding: 38px;
-	position: relative;
+		display: block;
+		background-color: var(--lt-gray);
+		margin: 20px 0 0;
+		padding: 38px;
+		width: 100%;
   }
 
   .personal-profile-info-card__contact-box::before {
@@ -1048,16 +1060,18 @@ div.fontawesome-icon i {
   }
 
   .personal-profile-info-card__contact-box h2 {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 	padding-bottom: 0;
+	font-family: var(--sans-font);
   }
 
   .personal-profile-info-card__contact-box p {
 	font-weight: 700;
+		color: var(--dk-gray);
   }
 
   .personal-profile-info-card__contact-box p a {
-	color: var(--burgundy);
+	color: var(--dk-gray);
 	text-decoration: underline;
 	text-underline-offset: 2px;
 	transition: color 0.2s ease-in-out;
